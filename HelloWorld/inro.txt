@@ -1,0 +1,6 @@
+1. Preprocessor Stuff
+2. Variable declaration
+3. Type definition
+4. Function definition
+5. Statement & expression
+6. comments
