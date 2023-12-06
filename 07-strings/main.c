@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int get_length_string(char * str)
+int get_length_string(char *str)
 {
     int offset = 0;
     while (str[offset] != 0)
@@ -9,6 +9,18 @@ int get_length_string(char * str)
         offset++;
     }
     return offset;
+}
+
+void copy_string(char *from, char *to)
+{
+    int offset = 0;
+    while (from[offset] != 0)
+    {
+        to[offset] = from[offset];
+        offset++;
+    }
+
+    to[offset] = 0;
 }
 
 int main(void)
@@ -32,7 +44,7 @@ int main(void)
     printf("%s\xA", str);       // printf("%s\n", fname);
 
     printf("%s %d\n", str, get_length_string(str));
-    printf("%s %lu\n", str, strlen(str)); //this need string.h header
+    printf("%s %lu\n", str, strlen(str)); // this need string.h header
 
     return 0;
 }
