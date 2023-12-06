@@ -23,6 +23,40 @@ void copy_string(char *from, char *to)
     to[offset] = 0;
 }
 
+char *reverse_string(char *str)
+{
+    if (str == NULL)
+    {
+        printf("Null string\n");
+        return NULL;
+    }
+
+    int length = strlen(str);
+    char *reversed = malloc((length + 1) * sizeof(char)); // Allocate memory for the reversed string
+    if (reversed == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return NULL;
+    }
+
+    strcpy(reversed, str); // Copy the input string to the newly allocated memory
+
+    int start = 0, end = length - 1;
+
+    while (start < end)
+    {
+        // swap characters
+        char temp = reversed[start];
+        reversed[start] = reversed[end];
+        reversed[end] = temp;
+
+        start++;
+        end--;
+    }
+
+    return reversed;
+}
+
 int main(void)
 {
     /*
@@ -38,6 +72,7 @@ int main(void)
     */
 
     char *fname = "Prasad";
+
     printf("%s\12", fname); // printf("%s\n", fname);
 
     char str[] = "Hello World"; //[H,E,L,L,O, ,W,O,R,L,D,0] ->  size of string -> 12 bytes
@@ -45,6 +80,15 @@ int main(void)
 
     printf("%s %d\n", str, get_length_string(str));
     printf("%s %lu\n", str, strlen(str)); // this need string.h header
+
+    char *reversed = reverse_string(fname);
+
+    if (reversed != NULL)
+    {
+        printf("Reversed string: %s\n", reversed);
+
+        free(reversed); // Free the allocated memory when done
+    }
 
     return 0;
 }
