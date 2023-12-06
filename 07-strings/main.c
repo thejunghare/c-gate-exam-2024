@@ -20,7 +20,9 @@ int main(void)
 
         ever char is a single byte [some value from 0-128, we use ASCII  standards to map numbers to characters]
 
-        Types of char ->> 1. controlable char a& 2. printable char
+        Types of char -> 1. controlable char a& 2. printable char
+
+        Task -> 1. implement a function that reverse a string & 2. implement a function to copy string to different array.
     */
 
     char *fname = "Prasad";
