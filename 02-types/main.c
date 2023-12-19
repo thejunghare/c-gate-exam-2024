@@ -3,7 +3,7 @@
 /*
 Types of data types in c
 Numerical, Arrays, Structs, Pointers
-Numberical -> int, float, double
+Numerical -> int, float, double
 
 'INT'
 Sr. s/uns            type/name    byte      range
@@ -24,7 +24,7 @@ for eg. int mynumber = 3; // correct
 This is where floating Number comes
 
 'CHAR'
-char => often use to store character and number, stores numberical value of the
+char => often use to store character and number, stores numerical value of the
 char in the variable.
 
 
